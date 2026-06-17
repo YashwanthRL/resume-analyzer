@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffefb3;
+  color: #013e37;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #013e37;
+}
+
+header p {
+  color: #013e37;
+  opacity: 0.7;
+  margin-top: 8px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.input-section {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.upload-box, .jd-box {
+  flex: 1;
+  background-color: #fffde7;
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 250px;
+  border: 1px solid #013e37;
+}
+
+.upload-box h3, .jd-box h3 {
+  color: #013e37;
+  margin-bottom: 15px;
+}
+
+input[type="file"] {
+  color: #013e37;
+  margin-bottom: 10px;
+}
+
+#file-name {
+  color: #013e37;
+  opacity: 0.6;
+  font-size: 0.85rem;
+}
+
+textarea {
+  width: 100%;
+  height: 180px;
+  background-color: #ffefb3;
+  color: #013e37;
+  border: 1px solid #013e37;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #013e37;
+  border-width: 2px;
+}
+
+button {
+  background-color: #013e37;
+  color: #ffefb3;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #025a50;
+}
+
+#loading {
+  color: #013e37;
+  font-size: 1rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+#results {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  background-color: #fffde7;
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 220px;
+  border: 1px solid #013e37;
+}
+
+.card h3 {
+  color: #013e37;
+  margin-bottom: 15px;
+}
+
+.score {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #013e37;
+  text-align: center;
+  padding: 20px 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+ul li {
+  background-color: #ffefb3;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #013e37;
+}
+
+#keywords-list li {
+  border-left: 3px solid #013e37;
+}
+
+#suggestions-list li {
+  border-left: 3px solid #025a50;
+}
+
+.hidden {
+  display: none;
+}

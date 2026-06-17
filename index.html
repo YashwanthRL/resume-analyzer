@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Smart Resume Analyzer</h1>
+    <p>Upload your resume and paste a job description to get AI-powered insights</p>
+  </header>
+
+  <div class="container">
+
+    <div class="input-section">
+      <div class="upload-box">
+        <h3>Upload Resume (PDF)</h3>
+        <input type="file" id="resume-upload" accept=".pdf" />
+        <p id="file-name">No file chosen</p>
+      </div>
+
+      <div class="jd-box">
+        <h3>Paste Job Description</h3>
+        <textarea id="job-description" placeholder="Paste the job description here..."></textarea>
+      </div>
+    </div>
+
+    <button id="analyze-btn" onclick="analyzeResume()">Analyze</button>
+
+    <div id="loading" class="hidden">Analyzing your resume...</div>
+
+    <div id="results" class="hidden">
+      <div class="card" id="score-card">
+        <h3>Match Score</h3>
+        <div class="score" id="score-value">0%</div>
+      </div>
+
+      <div class="card" id="keywords-card">
+        <h3>Missing Keywords</h3>
+        <ul id="keywords-list"></ul>
+      </div>
+
+      <div class="card" id="suggestions-card">
+        <h3>Suggestions</h3>
+        <ul id="suggestions-list"></ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/analyzer.js"></script>
+
+</body>
+</html>
